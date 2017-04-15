@@ -14,6 +14,7 @@ var componentPoint = function (name, config) {
         if (typeof item[3] !== "undefined" && typeof item[4] !== "undefined") {
             point.css("left", item[3]).css("top", item[4]);
         }
+        point.css("transition", "all 1s " + idx * .5 + "s");
         component.append(point);
     });
     return component;
