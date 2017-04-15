@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="../css/pages.css">
+        <style type="text/css">
+            body {
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript" src="../js/lib/jquery.js"></script>
+        <script type="text/javascript" src="../js/lib/jquery.fullpage.js"></script>
+        <script type="text/javascript" src="../js/componentBase.js"></script>
+        <script type="text/javascript" src="../js/pages.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                var ps = new pages();
+                ps
+                .addPage("face", "首页")
+                    .addComponent("logo", {
+                        text: "logo",
+                        width: 400,
+                        height: 100,
+                        css: { backgroundColor: "red", top: 200, opacity: 0 },
+                        center: true,
+                        animateIn: { opacity: 1 },
+                        animateOut: { opacity: 0 },
+                    })
+                    .addComponent("slogan", {
+                        text: "slogan",
+                        width: 400,
+                        height: 100,
+                        css: { backgroundColor: "green", top: 350 },
+                        center: true
+                    })
+                .addPage("desc", "核心理念页")
+                    .addComponent("caption", {
+                        text: "slogan",
+                        width: 400,
+                        height: 100,
+                        css: { backgroundColor: "red", top: 350 },
+                        center: true
+                    })
+                .addPage("page-3", "课程方向分布页")
+                    .addComponent("caption", { text: "课程方向分布" })
+                .loader();
+            });
+        </script>
+    </body>
+</html>
