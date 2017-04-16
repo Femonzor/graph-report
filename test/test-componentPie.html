@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>test-componentPolyline</title>
+        <title>test-componentPie</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
         <link rel="stylesheet" type="text/css" href="../css/componentBase.css">
-        <link rel="stylesheet" type="text/css" href="../css/componentPolyline.css">
+        <link rel="stylesheet" type="text/css" href="../css/componentPie.css">
         <style type="text/css">
             body {
                 padding: 0;
@@ -31,28 +31,28 @@
         <div class="iphone"></div>
         <script type="text/javascript" src="../js/lib/jquery.js"></script>
         <script type="text/javascript" src="../js/componentBase.js"></script>
-        <script type="text/javascript" src="../js/componentPolyline.js"></script>
+        <script type="text/javascript" src="../js/componentPie.js"></script>
         <script type="text/javascript">
             var config = {
-                type: "polyline",
-                width: 530,
+                type: "pie",
+                width: 400,
                 height: 400,
                 data: [
                     ["JS", .4, "#ff7676"],
                     ["HTML", .2],
-                    ["CSS3", .2],
-                    ["HTML5", .2],
-                    ["jQuery", .35]
+                    ["CSS3", .05],
+                    ["PHP", .2],
+                    ["jQuery", .15]
                 ],
                 css: {
                     top: 100,
-                    opacity: 1
+                    // opacity: 0
                 },
-                animateIn: { top: 200, opacity: 1 },
-                animateOut: { top: 100, opacity: 0 },
+                // animateIn: { top: 200, opacity: 1 },
+                // animateOut: { top: 100, opacity: 0 },
                 center: true
             };
-            var h5 = new componentPolyline("myname", config);
+            var h5 = new componentPie("myname", config);
             $(".iphone").append(h5);
             var leave = false;
             $("body").click(function () {
